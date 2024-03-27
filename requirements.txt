@@ -18,7 +18,7 @@ Pygments==2.17.2
 pyotp==2.9.0
 pypng==0.20220715.0
 PyQRCode==1.2.1
-qrcode==7.4.2
+    ==7.4.2
 readme_renderer==43.0
 requests==2.31.0
 requests-toolbelt==1.0.0

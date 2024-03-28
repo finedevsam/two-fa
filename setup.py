@@ -9,7 +9,7 @@ setuptools.setup(
     version="1.0.0",
     author="Samson Ilemobayo",
     author_email="ilemobayosamson@gmail.com",
-    description="TeamApt Monnify Python Library",
+    description="TwoFa typically refers to 'Two-Factor Authentication,' a security process that requires users to provide two different authentication factors to verify their identity.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/finedevsam/two-fa",
@@ -22,6 +22,9 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        "requests",
+        "cloudinary",
+        "pillow",
+        "PyQRCode",
+        "qrcode"
     ],
 )

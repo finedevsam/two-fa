@@ -69,10 +69,10 @@ After calling the QR code generation function, the service returns a JSON object
 
 ```json
     {
-    "status": true,
-    "url": "http://res.cloudinary.cvvxm2e4kj.png",
-    "user_key": "4CXDI7QR53NTBWA3DD4DSY",
-    "identifier": "johndoe@gmail.com"
+        "status": true,
+        "url": "http://res.cloudinary.cvvxm2e4kj.png",
+        "user_key": "4CXDI7QR53NTBWA3DD4DSY",
+        "identifier": "johndoe@gmail.com"
     }
 ```
 

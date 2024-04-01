@@ -43,7 +43,7 @@ The generate_qr_code function generates a QR code for two-factor authentication,
 ### Parameters
 1. **identifier (str):** A unique identifier for the user, such as an email address or username, to be encoded within the QR code.
 2. **storage (str):** The storage service to use for saving the QR code image. Currently supports "s3bucket" and "cloudinary"; future versions may include additional services.
-    ### A. S3 Bucket Configuration
+    #### S3 Bucket Configuration
     i. **bucket_name (str):** The name of the bucket in the storage service where the QR code image will be saved.
     ii. **access_key (str):** The access key ID for authenticating with the storage service.
     iii. **secret_access (str):** The secret access key for authenticating with the storage service.

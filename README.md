@@ -9,3 +9,11 @@ TwoFa is a Python library designed to make two-factor authentication (2FA) integ
 2. **Multiple 2FA Methods:** Supports various two-factor authentication methods, including SMS, email, and authenticator apps.
 3. **Customizable:** Flexible configuration to suit different security requirements.
 4. **Secure:** Implements industry-standard protocols to ensure the security of authentication processes.
+5. **Support Multiple Storage Device:** Support AWS S3Bucket, Cloudinary e.t.c to manage authentication QR code.
+
+
+### Installation
+
+Install `TwoFa` using pip:
+
+`pip install twofa`

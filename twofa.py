@@ -54,7 +54,7 @@ class TwoFa:
         
         return TwoFa.build_body(status=True, url=url, user_key=user_key, identifier=kwargs.get("identifier"))
 
-    def validate_otp(self, user_key: str, code: str) -> bool:
+    def validate_code(self, user_key: str, code: str) -> bool:
         check = ManageOTP.verify_otp(user_key, code)
         if check:
             return TwoFa.build_body(status=True, message="valid")

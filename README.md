@@ -87,3 +87,36 @@ iv. **identifier:** Provides a way to double-check that the QR code generated co
 
 ### Handling Errors
 In case of failure, the status field will be `False`, and the response may include an additional field, error, detailing the reason for the failure. Ensure your application can gracefully handle such scenarios and provide appropriate feedback to the user.
+
+### 4. Validate Code
+The `validate_code` function is designed to validate a two-factor authentication (2FA) code provided by the user. It checks the code against the user's previously generated and stored 2FA setup, ensuring that the code is correct and within its validity period.
+
+### Parameters
+1. **user_key (str):** A unique key associated with the user's 2FA setup. This key should have been saved during the 2FA setup process.
+2. **code (str):** The 2FA code that the user entered, which needs to be validated.
+
+### Returns
+A dictionary containing the following keys:
+1. **status (bool):** Indicates the success or failure of the code validation. A value of True means the code is valid, while False indicates it is invalid or expired.
+2. **message (str):** Provides additional information about the validation result. Typical messages include 'valid' for successful validations or error messages if the validation fails.
+
+### Example Usage
+
+Here's how to use the `validate_code` function:
+```python
+resp = twofa.validate_code(user_key="DEPB73TJNMZYAVZ7IG", code="856864")
+print(resp)
+```
+
+```json
+{'status': False, 'message': 'not valid'}
+```
+### Handling Errors
+The function is designed to be robust against common errors, returning a `False` status for any issue encountered during validation, including invalid codes, expired codes, or internal errors. Always check the `status` field to determine the outcome of the validation process.
+
+### Notes
+i. Ensure the `user_key` corresponds to the correct user's 2FA setup before attempting to validate a code.
+
+ii. The `code` parameter should be treated as sensitive information and handled securely throughout your application.
+
+iii. This function should be integrated as part of your application's authentication flow, typically after the user has provided their primary credentials.

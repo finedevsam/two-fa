@@ -51,6 +51,8 @@ The generate_qr_code function generates a QR code for two-factor authentication,
 
     #### Cloudinary Configuration
     i. **cloud_name (str):** The name of the bucket in the storage service where the QR code image will be saved.
+
     ii. **api_key (str):** The access key ID for authenticating with the storage service.
+    
     iii. **api_secret (str):** The secret access key for authenticating with the storage service.
 3. 

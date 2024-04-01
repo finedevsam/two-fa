@@ -1,4 +1,4 @@
-from utils.core import ManageOTP
+from .core import ManageOTP
 
 class TwoFa:
 

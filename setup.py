@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="twofa", # Replace with your own username
-    version="1.0.0",
+    version="1.0.2",
     author="Samson Ilemobayo",
     author_email="ilemobayosamson@gmail.com",
     description="TwoFa is a Python library designed to make two-factor authentication (2FA) integration seamless and secure for applications.",

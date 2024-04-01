@@ -84,3 +84,6 @@ ii. **url:** Use this URL to retrieve the QR code image. You can embed it in an 
 iii. **user_key:** Securely store this key in your application's database associated with the user's account. It will be required for validating 2FA tokens.
 
 iv. **identifier:** Provides a way to double-check that the QR code generated corresponds to the correct user account, especially in systems where multiple requests might be processed simultaneously.
+
+### Handling Errors
+In case of failure, the status field will be `False`, and the response may include an additional field, error, detailing the reason for the failure. Ensure your application can gracefully handle such scenarios and provide appropriate feedback to the user.

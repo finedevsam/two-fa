@@ -17,5 +17,13 @@ TwoFa is a Python library designed to make two-factor authentication (2FA) integ
 Install `TwoFa` using pip:
 
 ```python
-    pip install twofa
+pip install twofa
+```
+
+### Quick Start
+Here's how to quickly set up `TwoFa` in your project:
+
+## 1. Import TwoFa
+```python
+from twofa import TwoFa
 ```

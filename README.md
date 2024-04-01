@@ -27,3 +27,8 @@ Here's how to quickly set up `TwoFa` in your project:
 ```python
 from twofa import TwoFa
 ```
+
+#### 2. Initialize TwoFa
+```python
+twofa = TwoFa(issuer_name='MyApp')
+```

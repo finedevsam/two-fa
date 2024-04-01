@@ -25,6 +25,7 @@ setuptools.setup(
         "cloudinary",
         "pillow",
         "PyQRCode",
-        "qrcode"
+        "qrcode",
+        "boto3"
     ],
 )

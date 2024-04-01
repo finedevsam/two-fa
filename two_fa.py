@@ -33,13 +33,19 @@ class TwoFa:
             for key in required_cloudinary_key:
                 if key not in [i for i in self.kwargs.keys()]:
                     return TwoFa.build_body(status=False, message=f"{key} is required as part of cloudinary configuration")
+                
+        
+        if self.kwargs.get("storage") == "s3bucket":
+            required_s3_key = ["bucket_name", "access_key", "secret_access"]
+            for key in required_s3_key:
+                if key not in [i for i in self.kwargs.keys()]:
+                    return TwoFa.build_body(status=False, message=f"{key} is required as part of s3 bucket configuration")
 
         user_key, url = ManageOTP.create_otp(
-                self.kwargs.get("cloud_name"),
-                self.kwargs.get("api_key"),
-                self.kwargs.get("api_secret"),
-                identifier,
-                self.kwargs.get("issuer_name")
+                storage=self.kwargs.get("storage"),
+                config=self.kwargs,
+                identifier=identifier,
+                issuer_name=self.kwargs.get("issuer_name")
             )
         if not user_key:
             return TwoFa.build_body(status=False, message=url)

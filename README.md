@@ -23,7 +23,7 @@ pip install twofa
 ### Quick Start
 Here's how to quickly set up `TwoFa` in your project:
 
-# 1. Import TwoFa
+#### 1. Import TwoFa
 ```python
 from twofa import TwoFa
 ```

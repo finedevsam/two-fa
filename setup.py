@@ -6,10 +6,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="twofa", # Replace with your own username
-    version="1.0.0",
+    version="1.0.5",
     author="Samson Ilemobayo",
     author_email="ilemobayosamson@gmail.com",
-    description="TwoFa typically refers to 'Two-Factor Authentication,' a security process that requires users to provide two different authentication factors to verify their identity.",
+    description="TwoFa is a Python library designed to make two-factor authentication (2FA) integration seamless and secure for applications.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/finedevsam/two-fa",
@@ -20,12 +20,15 @@ setuptools.setup(
         "Operating System :: OS Independent",
     
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
+
     install_requires=[
-        "cloudinary",
-        "pillow",
-        "PyQRCode",
+        "pyqrcode",
         "qrcode",
-        "boto3"
+        "pyotp",
+        "boto3",
+        "pillow",
+        "cloudinary",
+        "wheel"
     ],
 )

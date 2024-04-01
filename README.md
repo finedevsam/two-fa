@@ -25,7 +25,7 @@ Here's how to quickly set up `TwoFa` in your project:
 
 #### 1. Import TwoFa
 ```python
-from twofa import TwoFa
+from twofa.auth import TwoFa
 ```
 
 #### 2. Initialize TwoFa
@@ -120,3 +120,22 @@ i. Ensure the `user_key` corresponds to the correct user's 2FA setup before atte
 ii. The `code` parameter should be treated as sensitive information and handled securely throughout your application.
 
 iii. This function should be integrated as part of your application's authentication flow, typically after the user has provided their primary credentials.
+
+### Advanced Usage
+
+Refer to the documentation for advanced configurations, including setting up different 2FA methods and customizing token expiration times.
+
+### Contributing
+
+We welcome contributions to `TwoFa`! If you have suggestions for improvements or bug fixes, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes.
+4. Push to the branch.
+5. Submit a pull request.
+
+Please refer to our contribution guidelines for more details.
+
+### License
+`TwoFa` is released under the GNU GENERAL PUBLIC LICENSE.

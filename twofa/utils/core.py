@@ -1,8 +1,5 @@
 import os
 from pyqrcode import QRCode
-import pyqrcode
-import png
-import tempfile
 
 import string, random
 import qrcode
@@ -47,7 +44,7 @@ class ManageOTP:
                 file_name = f"{uuid.uuid4()}.png"
                 s3_client.put_object(Bucket=kwargs.get("config").get("bucket_name"), Body=ManageOTP.image_to_byte_array(img), Key=file_name)
                 img_url = f"https://{kwargs.get('config').get('bucket_name')}.s3.amazonaws.com/{file_name}"
-                
+
                 return user_keys, img_url
         except Exception as e:
             return False, e

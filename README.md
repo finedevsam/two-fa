@@ -69,7 +69,7 @@ After calling the QR code generation function, the service returns a JSON object
 
 ```json
     {
-    "status": True,
+    "status": true,
     "url": "http://res.cloudinary.cvvxm2e4kj.png",
     "user_key": "4CXDI7QR53NTBWA3DD4DSY",
     "identifier": "johndoe@gmail.com"
@@ -109,7 +109,7 @@ print(resp)
 ```
 
 ```json
-{'status': False, 'message': 'not valid'}
+{"status": false, "message": "not valid"}
 ```
 ### Handling Errors
 The function is designed to be robust against common errors, returning a `False` status for any issue encountered during validation, including invalid codes, expired codes, or internal errors. Always check the `status` field to determine the outcome of the validation process.

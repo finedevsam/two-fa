@@ -56,20 +56,16 @@ class ManageOTP:
             return True
         return False
     
-    
-    def create_time_base_otp(self):
-        data = QRCode.objects.filter(email=self.email).first()
-        
-        totp = pyotp.TOTP(data.user_key, interval=600)
+    @staticmethod
+    def create_time_base_otp(identifier: str):
+        totp = pyotp.TOTP(identifier, interval=600)
         otpcode = totp.now()
-        # print(otpcode)
-        self.send.send_otp(self.email, otpcode)
-        pass
-    
-    def verify_time_base_otp(self):
-        data = QRCode.objects.filter(email=self.email).first()
-        totp = pyotp.TOTP(data.user_key, interval=600)
-        check = totp.verify(self.otp_code)
+        return otpcode
+
+    @staticmethod
+    def verify_time_base_otp(identifier: str, code:str):
+        totp = pyotp.TOTP(identifier, interval=600)
+        check = totp.verify(code)
         return check
     
     @staticmethod
